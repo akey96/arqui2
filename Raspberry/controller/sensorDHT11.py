@@ -28,7 +28,7 @@ class SensorDHT11():
             #print(self.humidity, self.temperature)
             self.saveTemperatureAndHumidity()
             self.sendTemperatureAndHumidity()
-            sleep(1)
+            sleep(19)
 
     def saveTemperatureAndHumidity(self):
         self.connectionDB.query("INSERT INTO `data` (`temperature`, `humidity`) VALUES ({}, {})".format(self.temperature, self.humidity))

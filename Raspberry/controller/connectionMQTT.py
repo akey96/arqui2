@@ -12,7 +12,7 @@ class ConnectionMQTT():
         self.client.on_connect = self.__on_connect
         self.client.on_publish = self.__on_publish
         self.client.on_subscribe = self.__on_subscribe
-        self.client.connect(config('host'), 1883, 60)
+        self.client.connect(config('hostMQTT'), 1883, 60)
         self.client.loop_start()
 
 

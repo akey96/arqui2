@@ -51,7 +51,7 @@ function onConnect() {
   addMqtt(callbackDHT11, 'sensorDHT11')
 }
 
-client = new Paho.MQTT.Client('192.168.1.7', 9001, "/ws", Math.floor(Math.random()*100)+new Date().getSeconds().toString());
+client = new Paho.MQTT.Client('pepito', 9001, "/ws", Math.floor(Math.random()*100)+new Date().getSeconds().toString());
 client.onConnectionLost = onConnectionLost;
 client.onMessageArrived = onMessageArrived;
 client.connect({onSuccess:onConnect});
