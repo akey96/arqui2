@@ -5,7 +5,7 @@ DROP TABLE IF EXISTS `data`;
 
 CREATE TABLE `data` (
       id  int NOT NULL AUTO_INCREMENT,
-      date datetime NOT NULL DEFAULT  ,
+      date datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
       temperature int,
       humidity int,
       PRIMARY KEY(`id`)
