@@ -1,3 +1,7 @@
+body{
+    text-align: center;
+    align-items: center
+}
 th {
     background-color: #4CAF50;
     color: white;
@@ -9,4 +13,11 @@ tr:nth-child(even) {
 td, tr {
     font-family: "Homer Simpson", cursive;
     font-size: 100%;
+    border: #4CAF50
+}
+.tit{
+    font:80% 80px/1em Amatic SC;
+    padding-top:20px;
+    font-size: 5ch;
+    font-style: italic
 }
