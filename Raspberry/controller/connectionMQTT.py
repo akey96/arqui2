@@ -11,6 +11,7 @@ class ConnectionMQTT():
         self.client = mqtt.Client()
         self.client.on_connect = self.__on_connect
         self.client.on_publish = self.__on_publish
+        self.client.on_message = self.__on_message
         self.client.on_subscribe = self.__on_subscribe
         self.client.connect(config('hostMQTT'), 1883, 60)
         self.client.loop_start()
@@ -23,13 +24,19 @@ class ConnectionMQTT():
         else :
             print('error en la conecction')
 
-
     def __on_publish(self, client, userdata, mid):
         print("mid: " + str(mid), userdata)
 
     def __on_subscribe(self, client, userdata, mid, granted_qos):
         print("Subscribed: " + str(mid) + " " + str(granted_qos))
 
+    def __on_message(self, client, userdata, message):
+        print(message.topic + " " + str(message.qos) + " " + str(message.payload))
+        value = message.payload.decode("utf-8")
+        #value = str(message.payload.decode("utf-8"))
+        print(self.callbacks)
+
+        self.callbacks[message.topic]()
 
     def addSubscribe(self, topic, callback):
 

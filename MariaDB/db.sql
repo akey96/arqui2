@@ -4,8 +4,8 @@ use dht11;
 DROP TABLE IF EXISTS `data`;
 
 CREATE TABLE `data` (
-      id int NOT NULL AUTO_INCREMENT,
-      date datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      id  int NOT NULL AUTO_INCREMENT,
+      date datetime NOT NULL DEFAULT  ,
       temperature int,
       humidity int,
       PRIMARY KEY(`id`)

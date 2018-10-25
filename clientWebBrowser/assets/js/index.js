@@ -49,14 +49,12 @@ function onConnect() {
   console.log("onConnect")
   client.subscribe('sensorDHT11')
   addMqtt(callbackDHT11, 'sensorDHT11')
+  let message = new Paho.MQTT.Message('data');
+  message.destinationName = 'data'
+  client.send(message)
 }
 
 client = new Paho.MQTT.Client('pepito', 9001, "/ws", Math.floor(Math.random()*100)+new Date().getSeconds().toString());
 client.onConnectionLost = onConnectionLost;
 client.onMessageArrived = onMessageArrived;
 client.connect({onSuccess:onConnect});
-
-
-
-
-
