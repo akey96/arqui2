@@ -1,4 +1,8 @@
 
+
+
+
+
 use dht11;
 
 DROP TABLE IF EXISTS `data`;
@@ -13,4 +17,4 @@ CREATE TABLE `data` (
 
 INSERT INTO data(temperature, humidity) VALUES (20, 30), (33, 45);
 
-SELECT * from data;
+SELECT * from data ;

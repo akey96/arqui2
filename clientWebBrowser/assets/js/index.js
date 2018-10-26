@@ -21,7 +21,7 @@ function callbackDHT11(topic, message) {
   let body_content = document.querySelector('#body-contents')
   body_content.textContent = ""
   let payload = JSON.parse(message)
-  
+  console.log(payload.data);
   for(let data of payload.data) {
     
     let tr = document.createElement('tr')
