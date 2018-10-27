@@ -3,7 +3,7 @@ body{
     align-items: center
 }
 th {
-    background-color: #4CAF50;
+    background-color: #194381;
     color: white;
     text-transform: uppercase;    
 }
@@ -13,7 +13,7 @@ tr:nth-child(even) {
 td, tr {
     font-family: "Homer Simpson", cursive;
     font-size: 100%;
-    border: #4CAF50
+    border: rgb(40, 85, 143)
 }
 .tit{
     font:80% 80px/1em Amatic SC;
@@ -24,4 +24,15 @@ td, tr {
     font-weight: 400; 
     color: #ffffff; 
     background:rgb(19, 114, 131)
+}
+table{
+    text-align-last: auto;
+    width: 100%
+}
+.cuadro{
+    background-color: #f2f4f8;
+    border: #194381;
+    width: 80%;
+    margin: 10px auto;
+
 }
